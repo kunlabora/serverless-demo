@@ -1,0 +1,16 @@
+{
+  "name": "serverless-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Serverless framework demo project used during knowledge sharing afternoon",
+  "scripts": {
+    "info": "sls info",
+    "deploy": "sls deploy",
+    "remove": "sls remove",
+    "logs": "sls logs --function hello-world -t",
+    "metrics": "sls metrics --function hello-world"
+  },
+  "devDependencies": {
+    "serverless": "^3.8.0"
+  }
+}

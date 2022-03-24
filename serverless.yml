@@ -1,0 +1,18 @@
+service: serverless-demo
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  stage: dev
+  region: eu-central-1
+  runtime: nodejs14.x
+
+functions:
+  hello-world:
+    handler: src/hello-world.handler
+    description: returns hello world
+    events:
+      - http:
+          method: get
+          path: hello-world
