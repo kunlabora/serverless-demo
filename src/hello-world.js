@@ -1,8 +1,11 @@
 // Documentation: https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html
 
 exports.handler = async function (event, context) {
+
+    const name = event.queryStringParameters?.name ?? 'World';
+
     return {
         statusCode: 200,
-        body: JSON.stringify({message: 'Hello World!'}),
+        body: JSON.stringify({message: `Hello ${name}!`}),
     };
 };

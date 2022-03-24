@@ -16,3 +16,8 @@ functions:
       - http:
           method: get
           path: hello-world
+          request:
+            parameters:
+              querystrings:
+                name: false
+
